@@ -9,16 +9,15 @@
   <meta name="keywords" content="">
   <meta property="og:title" content="PescadoGames | Status" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://store.pescadogames.com/index.html" />
-  <meta property="og:image" content="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png" />
-  <meta property="og:image" content="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png">
+  <meta property="og:url" content="https://www.pescadogames.com/index.html" />
+  <meta property="og:image" content="../assets/icons/PGBlueLogo-toumei.png" />
+  <meta property="og:image" content="../assets/icons/PGBlueLogo-toumei.png">
   <meta property="og:locale" content="ja_JP">
-  <link rel="stylesheet" type="text/css" href="https://linux.pescadogames.com/assets/styles/reset.css">
-  <link rel="stylesheet" href="https://www.pescadogames.com/assets/styles/footercss.css">
-  <link rel="stylesheet" href="assets/styles/bugreport.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="../assets/styles/parts.css">
+  <link rel="stylesheet" href="../assets/styles/footercss.css">
+  <link rel="stylesheet" href="../assets/styles/statuspage.css">
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush%7CNoto+Serif+JP&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="https://www.pescadogames.com/favicon.ico">
   <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.pescadogames.com/favicon.ico">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMK183GM24"
@@ -59,41 +58,103 @@
     </div>
   </header>
 
-  <div class="Osirase">
-    <div class="OsiraseContainer HidariNoColorBarGray OsiraseMarginDelete">
-      <img src="https://linux.pescadogames.com/assets/image/StatusInfomationMark.svg">
-      <h2>現在一部のゲームは早期アクセスとしてリリースされています。その際に、エラーが出た際にエラーコードを表示するように設計しました。
-        <br>このページでは、そのエラーコードをどのように対処するのかが書いてあります。ぜひご参考ください。
-      </h2>
-    </div>
-    <div class="OsiraseContainer HidariNoColorBarYellow">
-      <img src="https://www.pescadogames.com/assets/image/Warning.png">
-      <h2>注意:エラーコードは特定の状況でのみ表示されます。ゲーム内のエラーに関しては、出るものと出ないものがあります。
-        <br>また、このエラーコード以外にも何かご不明な点がございましたらお気軽にご相談ください。
-      </h2>
-    </div>
-    <h1 class="mainTitlePC">PescadoGamesサポートへようこそ</h1>
-    <h1 class="mainTitleSP">PescadoGames<br>サポートへ<br>ようこそ</h1>
-    <div class="SearchCont">
-      <input id="errorcodeinput" type="text" placeholder="検索したいサポート情報を入力してください">
-      <span>入力する際の注意:エラーコードを入力する際は、必ず"E"も含めてください。</span>
-    </div>
-  </div>
-
   <div id="container">
-    <h2 class="ProcateTitlePC">ご覧になりたいサポート情報を選択してください。</h2>
-    <h2 class="ProcateTitleSP">ご覧になりたいサポート情報を<br>選択してください。</h2>
-    <div class="categorycont">
-      <a class="ProductCategory GameCate" href="game/">
-        <h2>ゲーム一般</h2>
-      </a>
-      <a class="ProductCategory" href="errorcode/">
-        <h2>エラーコード</h2>
-      </a>
-      <a class="ProductCategory NowStatusCate" href="https://status.pescadogames.com/">
-        <h2>現在のステータス</h2>
-      </a>
+    <div class="nowstatus allok">
+      <img src="../assets/image/StatusCheckMark.svg" id="statusmark">
+      <h2 id="statustext">すべてのサービスは正常に動作しています！</h2>
     </div>
+    <ul class="accordion-area">
+      <li><!--li ~ /li までが一つのアコーディオン-->
+        <section>
+          <h3 class="status statusok websitestatus" id="websitestatus">正常</h3>
+          <h3 class="title">WebSite</h3>
+          <div class="box">
+            <div class="allservicecont">
+              <h3 class="allservicename">GitHubPages(Repository)</h3>
+              <h3 class="allservicestatus githubpagesstatus statusok" id="githubpagesstatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="allservicecont allservicecontbottom">
+              <h3 class="allservicename">表示</h3>
+              <h3 class="allservicestatus displaystatus statusok" id="displaystatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="boxcont">
+              <h2>過去に起きた問題</h2>
+              <ul>
+                <li>
+                  <div class="kakonoproblem"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+
+      <li><!--li ~ /li までが一つのアコーディオン-->
+        <section>
+          <h3 class="status statusok pgbotstatus" id="pgbotstatus">正常</h3>
+          <h3 class="title">PescadoGamesBOT</h3>
+          <div class="box">
+            <div class="allservicecont">
+              <h3 class="allservicename">サーバー</h3>
+              <h3 class="allservicestatus pgbotserverstatus statusok" id="pgbotserverstatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="allservicecont allservicecontbottom">
+              <h3 class="allservicename">リポジトリ</h3>
+              <h3 class="allservicestatus pgbotrepositorystatus statusok" id="pgbotrepositorystatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="allservicecont allservicecontbottom">
+              <h3 class="allservicename">応答、反応</h3>
+              <h3 class="allservicestatus pgbotresponsestatus statusok" id="pgbotresponsestatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="allservicecont allservicecontbottom">
+              <h3 class="allservicename">グローバルチャット</h3>
+              <h3 class="allservicestatus pgbotgbcstatus statusok" id="pgbotgbcstatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="boxcont">
+              <h2>過去に起きた問題</h2>
+              <ul>
+                <li>
+                  <div class="kakonoproblem"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+
+      <li><!--li ~ /li までが一つのアコーディオン-->
+        <section>
+          <h3 class="status statusok pescadogameslauncherstatus" id="pescadogameslauncherstatus">正常</h3>
+          <h3 class="title">PescadoGamesLauncher</h3>
+          <div class="box">
+            <div class="allservicecont">
+              <h3 class="allservicename">ダウンロードサーバー</h3>
+              <h3 class="allservicestatus serverstatus statusok" id="serverstatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="allservicecont allservicecontbottom">
+              <h3 class="allservicename">製品ページ等の表示</h3>
+              <h3 class="allservicestatus websiteviewstatus statusok" id="websiteviewstatus">Active</h3>
+              <a class="problempagebutton"></a>
+            </div>
+            <div class="boxcont">
+              <h2>過去に起きた問題</h2>
+              <ul>
+                <li>
+                  <div class="kakonoproblem"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+    </ul>
   </div>
   <!--コンテンツ本体終わり-->
 
@@ -101,9 +162,9 @@
     <footer id="copyrightandsns">
       <div class="socialnetworkbutton">
         <a href="https://twitter.com/PescadoGames" id="twitterlogobutton"><img
-            src="assets/img/twitterlogowhite.png"></a>
+            src="../assets/img/twitterlogowhite.png"></a>
         <a href="https://www.youtube.com/@PescadoGames" id="youtubelogobutton"><img
-            src="assets/img/yt_icon_mono_dark.png"></a>
+            src="../assets/img/yt_icon_mono_dark.png"></a>
       </div>
     </footer>
     <footer id="URL">
@@ -133,19 +194,7 @@
   <!--▽▽jQuery▽▽-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://linux.pescadogames.com/assets/js/status.js"></script>
-  <script>
-    let text_form = document.getElementById('errorcodeinput');
-
-    text_form.addEventListener('keypress', test_ivent);
-
-    function test_ivent(e) {
-      if (e.keyCode === 13) {
-        window.location.href = "https://www.google.com/search?q=site%3Asupport.pescadogames.com+" + text_form.value;
-      }
-      return false;
-    }
-  </script>
+  <script src="../assets/js/status.js"></script>
   <script>
     const ham = $('#js-hamburger');
     const nav = $('#js-nav');
@@ -192,9 +241,6 @@
   <!--△△jQuery△△-->
   <script data-cfasync="false"
     src="https://www.pescadogames.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22826523.js"></script>
-  <!-- End of HubSpot Embed Code -->
 
 </body>
 
