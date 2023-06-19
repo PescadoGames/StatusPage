@@ -2,245 +2,322 @@
 <html lang="ja">
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PescadoGames | Status</title>
-  <meta name="description" content="PescadoGames製品のステータス">
-  <meta name="keywords" content="">
-  <meta property="og:title" content="PescadoGames | Status" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.pescadogames.com/index.html" />
-  <meta property="og:image" content="../assets/icons/PGBlueLogo-toumei.png" />
-  <meta property="og:image" content="../assets/icons/PGBlueLogo-toumei.png">
-  <meta property="og:locale" content="ja_JP">
-  <link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
-  <link rel="stylesheet" type="text/css" href="../assets/styles/parts.css">
-  <link rel="stylesheet" href="../assets/styles/footercss.css">
-  <link rel="stylesheet" href="../assets/styles/statuspage.css">
-  <link href="https://fonts.googleapis.com/css?family=Alex+Brush%7CNoto+Serif+JP&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="https://www.pescadogames.com/favicon.ico">
-  <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.pescadogames.com/favicon.ico">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMK183GM24"
-    type="e99681242d084a2fbe090e20-text/javascript"></script>
-  <script type="e99681242d084a2fbe090e20-text/javascript">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>PescadoGames | Status</title>
+    <meta property="og:title" content="PescadoGames | Status" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://status.pescadogames.com/" />
+    <meta property="og:image" content="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png" />
+    <meta property="og:locale" content="ja_JP">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300&family=Noto+Sans+JP:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png">
+    <link rel="stylesheet" href="https://www.pescadogames.com/assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/footercss.css">
+    <link rel="stylesheet" href="assets/styles/statuspage.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RKHGWE5VK"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-TMK183GM24');
+        gtag('config', 'G-5RKHGWE5VK');
     </script>
+    <script src="assets/js/allpage.js"></script>
 </head>
 
 <body>
-  <!--Header-->
-  <header class="header">
-    <div class="header__inner">
-      <h1 class="header__title header-title">
-        <a href=""><img src="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png"></a>
-      </h1>
 
-      <nav class="header__nav nav" id="js-nav">
-        <ul class="nav__items nav-items">
-          <li class="nav-items__item"><a href="https://www.pescadogames.com/">ホーム</a></li>
-          <li class="nav-items__item"><a href="https://www.pescadogames.com/about.html">概要</a></li>
-          <li class="nav-items__item"><a href="https://www.pescadogames.com/services.html">製品・サービス</a></li>
-          <li class="nav-items__item"><a href="https://www.pescadogames.com/news.html">お知らせ</a></li>
-          <li class="nav-items__item"><a href="https://www.pescadogames.com/contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
+    <!--Header-->
+    <header class="header headershow" id="header">
+        <div class="header__inner">
+            <h1 class="header__title header-title sp">
+                <a href="index.html" class="headeratag">
+                    <img src="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png">
+                </a>
+            </h1>
+            <nav class="header__nav nav" id="js-nav">
+                <ul class="nav__items nav-items">
+                    <h1 class="header__title header-title pc">
+                        <a href="index.html" class="headeratag">
+                            <img src="https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png">
+                        </a>
+                    </h1>
+                    <li class="nav-items__item"><a href="index">ホーム</a></li>
+                    <li class="nav-items__item"><a href="about">概要</a></li>
+                    <li class="nav-items__item"><a href="services">すべての製品</a></li>
+                    <li class="nav-items__item"><a href="news">最新情報</a></li>
+                    <li class="nav-items__item"><a href="contact">お問い合わせ</a></li>
+                    <li class="nav-items__item">
+                        <button class="darkthemechangebutton" id="darkthemechangebutton">Change Theme</button>
+                    </li>
+                    </li>
+                </ul>
+            </nav>
 
-      <button class="header__hamburger hamburger" id="js-hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+            <button class="header__hamburger hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    </div>
-  </header>
+        </div>
+    </header>
 
-  <div id="container">
     <div class="nowstatus allok">
-      <img src="../assets/image/StatusCheckMark.svg" id="statusmark">
-      <h2 id="statustext">すべてのサービスは正常に動作しています！</h2>
+        <div id="nowstatusback"></div>
+        <h2 id="statustext">すべてのサービスは正常に動作しています！</h2>
+        <p>Efect by Particle.js(Particles.jsWithRotateAndImageOpacity)</p>
     </div>
-    <ul class="accordion-area">
-      <li><!--li ~ /li までが一つのアコーディオン-->
-        <section>
-          <h3 class="status statusok websitestatus" id="websitestatus">正常</h3>
-          <h3 class="title">WebSite</h3>
-          <div class="box">
-            <div class="allservicecont">
-              <h3 class="allservicename">GitHubPages(Repository)</h3>
-              <h3 class="allservicestatus githubpagesstatus statusok" id="githubpagesstatus">Active</h3>
-              <a class="problempagebutton"></a>
+
+    <div id="container">
+        <div class="servicelist">
+            <button onclick="WebSiteClick()" id="WebSiteButton">WebSite</button>
+            <button onclick="PescadoGamesBOTClick()" id="PescadoGamesBOTButton">PescadoGamesBOT</button>
+            <button onclick="PescadoGamesStoreClick()"
+                id="PescadoGamesLauncherButton">PescadoGamesStore(Launcher)</button>
+        </div>
+
+        <div class="serviceinfo" id="serviceinfo">
+            <div class="serviceinfotitle lefttorightflex">
+                <h1 id="serviceinfotitle">PescadoGamesBOT</h1>
+                <h2 id="servicenowinfo">現在発生してる問題:<a href="" id="problemlink"></a></h2>
             </div>
-            <div class="allservicecont allservicecontbottom">
-              <h3 class="allservicename">表示</h3>
-              <h3 class="allservicestatus displaystatus statusok" id="displaystatus">Active</h3>
-              <a class="problempagebutton"></a>
+
+            <div class="lefttorightflex">
+                <p id="serviceinfotext1">サーバー</p>
+                <p id="serviceinfostatus1">正常稼働中</p>
             </div>
-            <div class="boxcont">
-              <h2>過去に起きた問題</h2>
-              <ul>
-                <li>
-                  <div class="kakonoproblem"></div>
+
+            <div class="lefttorightflex">
+                <p id="serviceinfotext2">リポジトリ</p>
+                <p id="serviceinfostatus2">正常稼働中</p>
+            </div>
+
+            <div class="lefttorightflex" id="serviceinfo3">
+                <p id="serviceinfotext3">応答、反応</p>
+                <p id="serviceinfostatus3">正常稼働中</p>
+            </div>
+
+            <div class="lefttorightflex" id="serviceinfo4">
+                <p id="serviceinfotext4">グローバルチャット</p>
+                <p id="serviceinfostatus4">正常稼働中</p>
+            </div>
+        </div>
+    </div>
+    <!--コンテンツ本体終わり-->
+
+    <div id="footer">
+
+        <footer id="copyrightandsns">
+            <div class="socialnetworkbutton">
+                <a href="https://twitter.com/PescadoGames" id="twitterlogobutton" target="_blank"
+                    rel="noopener noreferrer"><img
+                        src="https://support.pescadogames.com/assets/img/twitterlogowhite.png"></a>
+                <a href="https://www.youtube.com/@PescadoGames" id="youtubelogobutton" target="_blank"
+                    rel="noopener noreferrer"><img
+                        src="https://support.pescadogames.com/assets/img/yt_icon_mono_dark.png"></a>
+            </div>
+        </footer>
+
+        <footer id="URL">
+            <ul class="footer-link">
+                <li class="linktitle"><span>PescadoGames</span></li>
+                <li><a href="https://www.pescadogames.com/" target="_blank" rel="noopener noreferrer">ホーム</a></li>
+                <li><a href="https://www.pescadogames.com/about" target="_blank" rel="noopener noreferrer">概要</a></li>
+                <li><a href="https://www.pescadogames.com/services" target="_blank"
+                        rel="noopener noreferrer"><span>製品・サービス</span></a></li>
+                <li><a href="https://www.pescadogames.com/news" target="_blank" rel="noopener noreferrer">お知らせ</a></li>
+            </ul>
+
+            <ul class="footer-link">
+                <li class="linktitle"><span>SNS/Contact</span></li>
+                <li><a href="https://discord.gg/9HC3wWQSTV" target="_blank"
+                        rel="noopener noreferrer"><span>Discord</span></a>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </li>
-
-      <li><!--li ~ /li までが一つのアコーディオン-->
-        <section>
-          <h3 class="status statusok pgbotstatus" id="pgbotstatus">正常</h3>
-          <h3 class="title">PescadoGamesBOT</h3>
-          <div class="box">
-            <div class="allservicecont">
-              <h3 class="allservicename">サーバー</h3>
-              <h3 class="allservicestatus pgbotserverstatus statusok" id="pgbotserverstatus">Active</h3>
-              <a class="problempagebutton"></a>
-            </div>
-            <div class="allservicecont allservicecontbottom">
-              <h3 class="allservicename">リポジトリ</h3>
-              <h3 class="allservicestatus pgbotrepositorystatus statusok" id="pgbotrepositorystatus">Active</h3>
-              <a class="problempagebutton"></a>
-            </div>
-            <div class="allservicecont allservicecontbottom">
-              <h3 class="allservicename">応答、反応</h3>
-              <h3 class="allservicestatus pgbotresponsestatus statusok" id="pgbotresponsestatus">Active</h3>
-              <a class="problempagebutton"></a>
-            </div>
-            <div class="allservicecont allservicecontbottom">
-              <h3 class="allservicename">グローバルチャット</h3>
-              <h3 class="allservicestatus pgbotgbcstatus statusok" id="pgbotgbcstatus">Active</h3>
-              <a class="problempagebutton"></a>
-            </div>
-            <div class="boxcont">
-              <h2>過去に起きた問題</h2>
-              <ul>
-                <li>
-                  <div class="kakonoproblem"></div>
+                <li><a href="https://www.pescadogames.com/contact" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </li>
+            </ul>
+        </footer>
 
-      <li><!--li ~ /li までが一つのアコーディオン-->
-        <section>
-          <h3 class="status statusok pescadogameslauncherstatus" id="pescadogameslauncherstatus">正常</h3>
-          <h3 class="title">PescadoGamesLauncher</h3>
-          <div class="box">
-            <div class="allservicecont">
-              <h3 class="allservicename">ダウンロードサーバー</h3>
-              <h3 class="allservicestatus serverstatus statusok" id="serverstatus">Active</h3>
-              <a class="problempagebutton"></a>
-            </div>
-            <div class="allservicecont allservicecontbottom">
-              <h3 class="allservicename">製品ページ等の表示</h3>
-              <h3 class="allservicestatus websiteviewstatus statusok" id="websiteviewstatus">Active</h3>
-              <a class="problempagebutton"></a>
-            </div>
-            <div class="boxcont">
-              <h2>過去に起きた問題</h2>
-              <ul>
-                <li>
-                  <div class="kakonoproblem"></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </li>
-    </ul>
-  </div>
-  <!--コンテンツ本体終わり-->
+        <footer id="borderfooter">
+            <div class="border"></div>
+        </footer>
 
-  <div id="footer">
-    <footer id="copyrightandsns">
-      <div class="socialnetworkbutton">
-        <a href="https://twitter.com/PescadoGames" id="twitterlogobutton"><img
-            src="../assets/img/twitterlogowhite.png"></a>
-        <a href="https://www.youtube.com/@PescadoGames" id="youtubelogobutton"><img
-            src="../assets/img/yt_icon_mono_dark.png"></a>
-      </div>
-    </footer>
-    <footer id="URL">
-      <ul class="footer-linksmall">
-        <li class="linktitle"><span>SiteMap</span></li>
-        <li><a href="https://www.pescadogames.com/">ホーム</a></li>
-        <li><a href="https://www.pescadogames.com/about">概要</a></li>
-        <li><a href="https://www.pescadogames.com/services"><span>製品・サービス</span></a></li>
-        <li><a href="https://www.pescadogames.com/news">お知らせ</a></li>
-      </ul>
-      <ul class="footer-link">
-        <li class="linktitle"><span>SNS/Contact</span></li>
-        <li><a href="https://discord.gg/9HC3wWQSTV"><span>Discord</span></a></li>
-        <li><a href="https://www.pescadogames.com/contact">お問い合わせ</a></li>
-      </ul>
-    </footer>
+        <footer id="copyright">
+            <span>&copy;PescadoGames All rights reserved.</span>
+        </footer>
+    </div>
 
-    <footer id="borderfooter">
-      <div class="border"></div>
-    </footer>
+    <!--▽▽jQuery▽▽-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/indexjs.js"></script>
+    <script src="assets/js/indexfadeanimation.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/status.js"></script>
+    <script>
+        const ham = $('#js-hamburger');
+        const nav = $('#js-nav');
+        ham.on('click', function () { //ハンバーガーメニューをクリックしたら
+            ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
+            nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
 
-    <footer id="copyright">
-      <span>&copy;PescadoGames All rights reserved.</span>
-    </footer>
-  </div>
+        });
+    </script>
+    <script>
+        particlesJS("nowstatusback", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": "#0bf"
+                },
+                "shape": {
+                    "type": "triangle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 3
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 25,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "rotate": {
+                    "value": -45,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": -10
+                    }
+                },
+                "line_linked": {
+                    "enable": false,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "top-left",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    <script>
+        //アコーディオンをクリックした時の動作
+        $('.title').on('click', function () {//タイトル要素をクリックしたら
+            var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
+            $(findElm).slideToggle();//アコーディオンの上下動作
 
-  <!--▽▽jQuery▽▽-->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="../assets/js/status.js"></script>
-  <script>
-    const ham = $('#js-hamburger');
-    const nav = $('#js-nav');
-    ham.on('click', function () { //ハンバーガーメニューをクリックしたら
-      ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
-      nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
+            if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
+                $(this).removeClass('close');//クラス名を除去し
+            } else {//それ以外は
+                $(this).addClass('close');//クラス名closeを付与
+            }
+        });
 
-    });
-  </script>
-  <script>
-    $('#contact').on('click', function () {
-      if ($('.contact').hasClass('contactdeactive')) {
-        $('.contact').removeClass("contactdeactive");
-      } else {
-        $('.contact').addClass("contactdeactive");
-      }
-    });
-  </script>
-  <script>
-    //アコーディオンをクリックした時の動作
-    $('.title').on('click', function () {//タイトル要素をクリックしたら
-      var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
-      $(findElm).slideToggle();//アコーディオンの上下動作
+        //アコーディオンをクリックした時の動作
+        $('.status').on('click', function () {//タイトル要素をクリックしたら
+            var findElm = $(this).next(".title").next(".box");//直後のアコーディオンを行うエリアを取得し
+            $(findElm).slideToggle();//アコーディオンの上下動作
 
-      if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
-        $(this).removeClass('close');//クラス名を除去し
-      } else {//それ以外は
-        $(this).addClass('close');//クラス名closeを付与
-      }
-    });
-
-    //アコーディオンをクリックした時の動作
-    $('.status').on('click', function () {//タイトル要素をクリックしたら
-      var findElm = $(this).next(".title").next(".box");//直後のアコーディオンを行うエリアを取得し
-      $(findElm).slideToggle();//アコーディオンの上下動作
-
-      if ($(this).next(".title").hasClass('close')) {//タイトル要素にクラス名closeがあれば
-        $(this).next(".title").removeClass('close');//クラス名を除去し
-      } else {//それ以外は
-        $(this).next(".title").addClass('close');//クラス名closeを付与
-      }
-    });
-  </script>
-  <!--△△jQuery△△-->
-  <script data-cfasync="false"
-    src="https://www.pescadogames.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            if ($(this).next(".title").hasClass('close')) {//タイトル要素にクラス名closeがあれば
+                $(this).next(".title").removeClass('close');//クラス名を除去し
+            } else {//それ以外は
+                $(this).next(".title").addClass('close');//クラス名closeを付与
+            }
+        });
+    </script>
+    <!--△△jQuery△△-->
+    <script data-cfasync="false"
+        src="https://www.pescadogames.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 </body>
 
