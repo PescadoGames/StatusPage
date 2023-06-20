@@ -69,92 +69,6 @@ a:visited {
     z-index: 100;
 }
 
-.loader {
-    position: relative;
-    width: 130px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(#0277bd, #0277bd),
-        linear-gradient(#29b6f6, #4fc3f7), linear-gradient(#29b6f6, #4fc3f7);
-    background-size: 80px 70px, 30px 50px, 30px 30px;
-    background-position: 0 0, 80px 20px, 100px 40px;
-}
-
-.loader:after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 12px;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-    box-sizing: content-box;
-    border: 10px solid #000;
-    box-shadow: 78px 0 0 -10px #fff, 78px 0 #000;
-    animation: wheelSk 0.75s ease-in infinite alternate;
-}
-
-.loader:before {
-    content: "";
-    position: absolute;
-    right: 100%;
-    top: 0px;
-    height: 70px;
-    width: 70px;
-    background-image: linear-gradient(#fff 45px, transparent 0),
-        linear-gradient(#fff 45px, transparent 0),
-        linear-gradient(#fff 45px, transparent 0);
-    background-repeat: no-repeat;
-    background-size: 30px 4px;
-    background-position: 0px 11px, 8px 35px, 0px 60px;
-    animation: lineDropping 0.75s linear infinite;
-}
-
-@keyframes wheelSk {
-
-    0%,
-    50%,
-    100% {
-        transform: translatey(0)
-    }
-
-    30%,
-    90% {
-        transform: translatey(-3px)
-    }
-}
-
-@keyframes lineDropping {
-    0% {
-        background-position: 100px 11px, 115px 35px, 105px 60px;
-        opacity: 1;
-    }
-
-    50% {
-        background-position: 0px 11px, 20px 35px, 5px 60px
-    }
-
-    60% {
-        background-position: -30px 11px, 0px 35px, -10px 60px
-    }
-
-    75%,
-    100% {
-        background-position: -30px 11px, -30px 35px, -30px 60px;
-        opacity: 0;
-    }
-}
-
-.loadinghiding {
-    opacity: 0;
-    transition: .5s;
-}
-
-.loadinghide {
-    display: none;
-}
-
 .analyticsinfo {
     position: fixed;
     bottom: 0;
@@ -384,6 +298,7 @@ a:visited {
 
 .serviceinfotitle h1 {
     font-size: xxx-large;
+    overflow-wrap: anywhere;
 }
 
 .serviceinfotitle.lefttorightflex {
@@ -404,180 +319,9 @@ a:visited {
     font-size: x-large;
 }
 
-.wrapper {
-    width: 80%;
-    height: 50%;
-    margin-top: 5%;
-    margin-right: auto;
-    margin-left: auto;
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 2px 10px #0000007a;
-    transition: .25s;
-}
-
-.wrapper .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5%;
-}
-
-.wrapper .content .content-item img {
-    aspect-ratio: 16/9;
-    object-fit: contain;
-    width: 400px;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0 2px 10px #0000007a;
-    transition: .25s;
-}
-
-.wrapper .text h2 {
-    font-size: xxx-large;
-    font-family: 'Noto Sans JP';
-}
-
-.wrapper .text p {
-    font-size: x-large;
-    font-family: 'Noto Sans JP';
-}
-
-.topimage {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(90deg, #fff 50%, #ffffff78), #fff url(https://www.pescadogames.com/assets/icons/PGBOT.png);
-    padding: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-}
-
-@media screen and (max-width: 1366px) {
-    .topimage {
-        background-repeat: no-repeat;
-        background-position-x: 200%;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    .topimage {
-        background-repeat: no-repeat;
-        background-position-x: 50%;
-    }
-}
-
-.introductionbutton {
-    background-color: #008aff;
-    height: 40px;
-    width: 100%;
-    color: #fff;
-    font-size: 135%;
-    box-shadow: 0px 2px 5px #0000005e;
-    border-radius: 10px;
-    transition: .25s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 25px;
-    cursor: pointer;
-}
-
-.introductionbutton:visited {
-    color: #fff;
-}
-
-.introductionbutton:hover {
-    background-color: #21adff;
-}
-
-.introductionbutton:active {
-    background-color: #0062b4;
-    box-shadow: 0 0 0 #0000005e;
-}
-
-.introductionbutton:disabled {
-    background-color: #747474;
-    box-shadow: 0 0 0 #0000005e;
-    cursor: default;
-}
-
 .show {
     opacity: 1;
     transform: translateY(0);
-}
-
-@media screen and (max-width:960px) {
-    .analyticsinfo {
-        width: 100%;
-        border-radius: 0px;
-    }
-
-    .yokoflex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tateflex {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .analyticsinfo a {
-        color: #00abff;
-    }
-
-    .analyticsinfo button {
-        width: 100%;
-    }
-
-    .wrapper {
-        width: 100%;
-        height: 50%;
-        margin: 100px 0;
-        margin-right: auto;
-        margin-left: auto;
-        background: #fff;
-        border-radius: 25px;
-        box-shadow: 0 2px 10px #0000007a;
-        transition: .25s;
-    }
-
-    .wrapper .content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 5%;
-    }
-
-    .wrapper .content .content-item img {
-        aspect-ratio: 16/9;
-        object-fit: contain;
-        width: 100%;
-        border-radius: 20px;
-        background: #fff;
-        box-shadow: 0 2px 10px #0000007a;
-        transition: .25s;
-    }
-
-    .wrapper .text h2 {
-        font-size: xx-large;
-        word-break: break-word;
-        font-family: 'Noto Sans JP';
-    }
-
-    .wrapper .text p {
-        font-size: large;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-family: 'Noto Sans JP';
-    }
 }
 
 .darkthemechangebutton {
@@ -617,16 +361,6 @@ body.darktheme .darkthemechangebutton {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-@media screen and (max-width: 1366px) {
-    .darkthemechangebutton {
-        width: 100%;
-    }
-
-    body.darktheme .darkthemechangebutton {
-        width: 100%;
-    }
 }
 
 body.darktheme .darkthemechangebutton:hover {
@@ -690,12 +424,97 @@ body.darktheme .serviceinfotitle.lefttorightflex {
     border-bottom: 0px solid #ffffff45;
 }
 
-body.darktheme .wrapper {
-    background: #191919;
-    box-shadow: 0 2px 10px #0a0a0a;
+@media screen and (max-width: 1366px) {
+    .darkthemechangebutton {
+        width: 100%;
+    }
+
+    body.darktheme .darkthemechangebutton {
+        width: 100%;
+    }
 }
 
-body.darktheme .wrapper .content .content-item img {
-    background: #191919;
-    box-shadow: 0 2px 10px #000;
+@media screen and (max-width: 960px) {
+    .analyticsinfo {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .yokoflex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tateflex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .analyticsinfo a {
+        color: #00abff;
+    }
+
+    .analyticsinfo button {
+        width: 100%;
+    }
+
+    .nowstatus p {
+        word-break: break-all;
+        position: absolute;
+        left: 0;
+        padding: 0 2.5%;
+        bottom: 10%;
+        font-size: 125%;
+        z-index: 1;
+    }
+
+    .nowstatus h2 {
+        position: absolute;
+        font-size: xx-large;
+        top: 40%;
+        left: 0;
+        padding: 0 2.5%;
+        transform: translateY(-50%);
+        font-weight: lighter;
+        z-index: 1;
+    }
+
+    #container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .lefttorightflex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .servicelist {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 50px;
+        padding: 0;
+        box-shadow: 0 0px 0px #0000007a
+    }
+
+    body.darktheme .servicelist {
+        background: transparent;
+    }
+
+    .serviceinfo {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px;
+    }
 }
