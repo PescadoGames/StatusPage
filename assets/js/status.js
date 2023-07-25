@@ -19,6 +19,9 @@ if (lang.toLowerCase().indexOf("ja") !== -1) {
     downloadserver = "ダウンロードサーバー";
     repository = "リポジトリ";
     displayofdetailspages = "製品ページ等の表示";
+    temp = "温度";
+    cpuusage = "CPU使用率";
+    memusage = "メモリ使用率";
     statusallactive = "すべてのサービスは正常に動作しています！";
     statusallmaintenance = "一部のサービスは現在メンテナンス中です";
     statusallupdate = "一部のサービスは現在更新作業中です";
@@ -37,6 +40,9 @@ else {
     server = "Server";
     downloadserver = "Download Server";
     repository = "Repository";
+    temp = "Temp";
+    cpuusage = "CPU Usage";
+    memusage = "Memory Usage";
     displayofdetailspages = "Display of details pages, etc.";
     statusallactive = "All services are working!";
     statusallmaintenance = "Some services are currently under maintenance";
@@ -131,57 +137,78 @@ function PescadoGamesStoreClick() {
         .then(data => infoshow(data, 3));
 }
 
+function APIServerClick() {
+    fetch("https://api.pescadogames.com/status/server")
+        .then(response => response.json())
+        .then(data => infoshow(data, 4));
+}
+
 function infoshow(readjson, readno) {
     let i = 1;
 
     document.getElementById('serviceinfo').classList.remove('show');
 
     setTimeout(function () {
-        for (let json of readjson) {
+        if (readno == 4) {
+            document.getElementById('serviceinfotitle').textContent = "PescadoGamesAPI";
+            document.getElementById('serviceinfotext1').textContent = temp;
+            document.getElementById('serviceinfotext2').textContent = cpuusage;
+            document.getElementById('serviceinfotext3').textContent = memusage;
+            document.getElementById('serviceinfostatus1').textContent = readjson.temp + '℃';
+            document.getElementById('serviceinfostatus2').textContent = readjson.cpu;
+            document.getElementById('serviceinfostatus3').textContent = readjson.mem;
+            document.getElementById('servicenowinfo').textContent = nowproblem + 'None';
+            document.getElementById('serviceinfo3').style = "";
+            document.getElementById('serviceinfo4').style = "display: none";
+            document.getElementById('serviceinfo').classList.add('show');
+        }
+        else {
+            for (let json of readjson) {
 
-            if (i == readno) {
-                if (readno == 1) {
-                    document.getElementById('serviceinfotitle').textContent = "WebSite";
-                    document.getElementById('serviceinfotext1').textContent = "GitHubPages(Repository)";
-                    document.getElementById('serviceinfotext2').textContent = design;
-                    document.getElementById('serviceinfostatus1').textContent = ClassDetecter(json.status1);
-                    document.getElementById('serviceinfostatus2').textContent = ClassDetecter(json.status2);
-                    document.getElementById('servicenowinfo').textContent = nowproblem + ProblemNameDetecter(json.problemname);
-                    document.getElementById('serviceinfo3').style = "display: none";
-                    document.getElementById('serviceinfo4').style = "display: none";
-                    document.getElementById('serviceinfo').classList.add('show');
-                    break;
+                if (i == readno) {
+                    if (readno == 1) {
+                        document.getElementById('serviceinfotitle').textContent = "WebSite";
+                        document.getElementById('serviceinfotext1').textContent = "GitHubPages(Repository)";
+                        document.getElementById('serviceinfotext2').textContent = design;
+                        document.getElementById('serviceinfostatus1').textContent = ClassDetecter(json.status1);
+                        document.getElementById('serviceinfostatus2').textContent = ClassDetecter(json.status2);
+                        document.getElementById('servicenowinfo').textContent = nowproblem + ProblemNameDetecter(json.problemname);
+                        document.getElementById('serviceinfo3').style = "display: none";
+                        document.getElementById('serviceinfo4').style = "display: none";
+                        document.getElementById('serviceinfo').classList.add('show');
+                        break;
+                    }
+                    else if (readno == 2) {
+                        document.getElementById('serviceinfotitle').textContent = "PescadoGamesBOT";
+                        document.getElementById('serviceinfotext1').textContent = server;
+                        document.getElementById('serviceinfotext2').textContent = repository;
+                        document.getElementById('serviceinfostatus1').textContent = ClassDetecter(json.status1);
+                        document.getElementById('serviceinfostatus2').textContent = ClassDetecter(json.status2);
+                        document.getElementById('serviceinfostatus3').textContent = ClassDetecter(json.status3);
+                        document.getElementById('serviceinfostatus4').textContent = ClassDetecter(json.status4);
+                        document.getElementById('servicenowinfo').textContent = nowproblem + ProblemNameDetecter(json.problemname);
+                        document.getElementById('serviceinfo3').style = "";
+                        document.getElementById('serviceinfo4').style = "";
+                        document.getElementById('serviceinfo').classList.add('show');
+                        break;
+                    }
+                    else if (readno == 3) {
+                        document.getElementById('serviceinfotitle').textContent = "PescadoGamesLauncher";
+                        document.getElementById('serviceinfotext1').textContent = downloadserver;
+                        document.getElementById('serviceinfotext2').textContent = displayofdetailspages;
+                        document.getElementById('serviceinfostatus1').textContent = ClassDetecter(json.status1);
+                        document.getElementById('serviceinfostatus2').textContent = ClassDetecter(json.status2);
+                        document.getElementById('servicenowinfo').textContent = nowproblem + ProblemNameDetecter(json.problemname);
+                        document.getElementById('serviceinfo3').style = "display: none";
+                        document.getElementById('serviceinfo4').style = "display: none";
+                        document.getElementById('serviceinfo').classList.add('show');
+                        break;
+                    }
                 }
-                else if (readno == 2) {
-                    document.getElementById('serviceinfotitle').textContent = "PescadoGamesBOT";
-                    document.getElementById('serviceinfotext1').textContent = server;
-                    document.getElementById('serviceinfotext2').textContent = repository;
-                    document.getElementById('serviceinfostatus1').textContent = ClassDetecter(json.status1);
-                    document.getElementById('serviceinfostatus2').textContent = ClassDetecter(json.status2);
-                    document.getElementById('serviceinfostatus3').textContent = ClassDetecter(json.status3);
-                    document.getElementById('serviceinfostatus4').textContent = ClassDetecter(json.status4);
-                    document.getElementById('servicenowinfo').textContent = nowproblem + ProblemNameDetecter(json.problemname);
-                    document.getElementById('serviceinfo3').style = "";
-                    document.getElementById('serviceinfo4').style = "";
-                    document.getElementById('serviceinfo').classList.add('show');
-                    break;
+                else {
+                    i++;
+                    continue;
                 }
-                else if (readno == 3) {
-                    document.getElementById('serviceinfotitle').textContent = "PescadoGamesLauncher";
-                    document.getElementById('serviceinfotext1').textContent = downloadserver;
-                    document.getElementById('serviceinfotext2').textContent = displayofdetailspages;
-                    document.getElementById('serviceinfostatus1').textContent = ClassDetecter(json.status1);
-                    document.getElementById('serviceinfostatus2').textContent = ClassDetecter(json.status2);
-                    document.getElementById('servicenowinfo').textContent = nowproblem + ProblemNameDetecter(json.problemname);
-                    document.getElementById('serviceinfo3').style = "display: none";
-                    document.getElementById('serviceinfo4').style = "display: none";
-                    document.getElementById('serviceinfo').classList.add('show');
-                    break;
-                }
-            }
-            else {
-                i++;
-                continue;
             }
         }
     }, 250);
